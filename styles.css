@@ -1,0 +1,253 @@
+:root {
+  --ink: #0f1722;
+  --paper: #f4f8ff;
+  --brand: #005eb8;
+  --accent: #d2293e;
+  --card: #ffffff;
+  --muted: #4a5c74;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", "Avenir Next", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 10%, #eef4ff 0%, #f7faff 45%, #edf3ff 100%);
+  min-height: 100vh;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.4rem;
+  background: linear-gradient(90deg, rgba(0, 42, 93, 0.9), rgba(0, 94, 184, 0.88));
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: #eaf3ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  animation: heroZoom 11s ease-out both;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(110deg, rgba(5, 20, 44, 0.75), rgba(5, 20, 44, 0.2) 58%, rgba(210, 41, 62, 0.3)),
+    radial-gradient(circle at 10% 30%, rgba(0, 94, 184, 0.45), transparent 50%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 850px);
+  color: #fff;
+  padding-top: 4rem;
+  animation: fadeUp 700ms ease-out both;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.73rem;
+  margin: 0;
+  color: #d2e6ff;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.45rem 0 0.9rem;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: clamp(2.1rem, 8vw, 4.2rem);
+  line-height: 1.04;
+}
+
+.hero-content p {
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: linear-gradient(90deg, #ff5f6d, var(--accent));
+  color: #fff;
+  text-decoration: none;
+  padding: 0.78rem 1.15rem;
+  font-weight: 800;
+  border-radius: 999px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(210, 41, 62, 0.35);
+}
+
+.intro,
+.content-wrap {
+  width: min(92%, 1000px);
+  margin: 0 auto;
+}
+
+.intro {
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 94, 184, 0.1);
+  border-radius: 16px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 16px 28px rgba(13, 30, 57, 0.08);
+}
+
+.intro h2 {
+  margin-top: 0;
+}
+
+.inner-page .content-wrap {
+  padding-top: 6.1rem;
+  padding-bottom: 2rem;
+}
+
+.page-intro h1 {
+  color: var(--brand);
+}
+
+.page-intro p {
+  color: var(--muted);
+}
+
+.cards-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.info-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem 1rem 0.7rem;
+  border: 1px solid rgba(15, 23, 34, 0.08);
+  box-shadow: 0 10px 22px rgba(15, 23, 34, 0.06);
+  animation: fadeUp 600ms ease both;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  font-size: 1.06rem;
+  color: #114f8f;
+}
+
+.info-card ul {
+  padding-left: 1.15rem;
+}
+
+.info-card li {
+  margin-bottom: 0.35rem;
+  color: #2f3f56;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(15, 23, 34, 0.1);
+  padding: 0.8rem 1.25rem 1.2rem;
+  color: #364b67;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+  font-size: 0.92rem;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.12);
+  }
+
+  to {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 0.72rem 1rem;
+  }
+
+  .hero-content {
+    padding-top: 4.5rem;
+  }
+
+  .intro {
+    margin-top: -1.25rem;
+  }
+}
