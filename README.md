@@ -24,11 +24,11 @@ Simple static website for PARAL Lab (DePaul University).
 
 ## CSC 503 — Fall 2026
 
-The course site is at `teaching/csc503/fall2026/` and has Home, Assignments, Policy, Preparing, and Schedule pages. It uses its own `assets/course.css`; editing it does not restyle the lab pages. All course links are relative and work under the GitHub Pages repository prefix. There is no build step or JavaScript requirement.
+The course site is at `teaching/csc503/fall2026/` and has Home, Assignments, Policy, AI Policy, Preparing, and Schedule pages. It uses its own `assets/course.css`; editing it does not restyle the lab pages. All course links are relative and work under the GitHub Pages repository prefix. There is no build step or JavaScript requirement.
 
 Expected course URL after publishing: https://lottiewang.github.io/PARAL-Lab/teaching/csc503/fall2026/
 
-Edit the individual HTML files to update content. The lecture dates are nominal Monday slots, not a confirmed start arrangement. Before releasing a final syllabus, finalize office details, TA/grader, actual delivery schedule, grading weights, assignment links, due dates, and assignment-specific collaboration/AI rules.
+Edit the individual HTML files to update content. The lecture dates are nominal Monday slots, not a confirmed start arrangement. Before releasing a final syllabus, finalize office details, TA/grader, actual delivery schedule, grading weights, assignment links, due dates, and assignment-specific collaboration rules.
 
 Sources checked September 8, 2026:
 
@@ -41,3 +41,5 @@ Sources checked September 8, 2026:
 
 The original course's institutional staff details, calendars, sanctions, grade weights, and deadlines are not adopted as DePaul policy.
 
+
+The AI policy is at `teaching/csc503/fall2026/ai-policy/`, with a summary on the Policy page. Both pages credit Stanford CS336 and link to its original AI policy guide. The policy describes the AGENTS.md files to be supplied in assignment repositories; this website change does not create or modify those separate repositories.
